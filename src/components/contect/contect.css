@@ -1,0 +1,131 @@
+.contact{
+    padding: 20px 10px;
+}
+/* text css code */
+.c-text{
+    padding: 0px 20px;
+    padding: 10px;
+    width: 30%;
+    align-self: flex-start;
+}
+.c-text , .c-min{
+    gap: 20px;
+    align-items: flex-start;
+}
+.c-min{
+  gap: 6px;
+}
+.c-min > a{
+     color:black;
+     font-weight: bold;
+     position: relative;
+     &::after{
+        transition: all 0.3s;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: black;
+        left: 0%;
+        bottom: -2px;
+        content: "";
+     }
+     &:hover::after{
+        width: 100%;
+        transition: all 0.3s linear;
+     }
+}
+.c-m-icon{
+    gap: 10px;
+}
+.c-m-icon > h3{
+    align-self: flex-start;
+}
+/* ________________________________________________________________ */
+
+/* form css */
+.c-form
+{
+    padding: 20px 10px;
+    gap: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.f-in{
+    align-self: start;
+    width: 100%;
+    gap: 5px;
+}
+.c-h-f{
+    gap: 10px;
+}
+.f-in > input , .f-in > textarea{
+    width: 100%;
+    padding: 10px;
+    resize: none;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid var(--prime);
+    outline: none;
+}
+.f-in > input::placeholder , .f-in > textarea::placeholder{
+    font-style: italic;
+}
+.f-in > small{
+    align-self: flex-start;
+    color: red;
+    &::after{
+        content: '***';
+    }
+}
+.c-btn {
+    align-self: flex-end;
+}
+.c-btn > button{
+    padding: 8px 30px;
+    font-weight: bold;
+    background: var(--prime);
+    border: none;
+    text-transform:uppercase;
+    color: var(--sec);
+    border-radius: 10px 10px 0 10px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(0, 0, 0 , 0.5);
+}
+.c-icons{
+    color: var(--prime);
+}
+.h-icon:hover > a > .icon{
+   color: black;
+}
+/* responsive */
+
+@media screen and (max-width:900px) and (min-width:700px) {
+    .c-text{
+        gap: 15px;
+        width: 40%;
+    }
+    .c-form{
+        width: 60%;
+    }
+    .head{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:700px) and (min-width:300px) {
+    .contact{
+        flex-direction: column;
+    }
+    .c-text{
+        width: 100%;
+        gap: 15px;
+    }
+    .c-form{
+        width: 100%;
+    }
+    .head{
+        font-size: 2rem;
+    }
+
+}

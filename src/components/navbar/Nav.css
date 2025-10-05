@@ -1,0 +1,177 @@
+.n-main{
+    background-color: var(--prime);
+    width: 100%;
+    position: fixed;
+    top:0;
+    padding: 10px 25px;
+    justify-content: space-between;
+    z-index: 999;
+}
+/* logo design */
+.n-logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--sec);
+    padding: 1px;
+    box-shadow: 0 0 10px rgb(40, 39, 39,0.7);
+}
+.n-logo > img{
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+.n-main:hover>.n-logo > img{
+    filter: brightness(100%);
+    transition: all 0.3s;
+}
+/* -------------------------------------- */
+/* links */
+.n-link{
+   gap: 10px;
+}
+.n-l-holder{
+    gap: 5px;
+}
+.mode{
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.n-l-holder > a{
+    color: white;
+    font-size: 1.3rem;
+    padding: 5px 15px;
+    border-radius: 20px 20px 0px 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s;
+    &::after{
+        width:100%;
+        height: 100%;
+        background:white;
+        content: "";
+        position: absolute;
+        top:-100px;
+        left:0;
+        transition: all 0.4s;
+        z-index: -1;
+    }
+    &:hover::after{
+        width: 100%;
+        top:0;
+    }
+    &:hover{
+        color: black;
+    }
+}
+.n-l-holder > .act2{
+   background: white;
+   color: var(--prime);
+}
+.light
+{
+    color:black;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+}
+.b-hold{
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(245, 244, 242,0.4);
+    }
+}
+/* --bar */
+.n-bar{
+    display: none;
+}
+.mode2{
+        display: none;
+    }
+
+/* responsive desgin */
+/* mobile */
+@media screen and (min-width:300px) and (max-width:700px) {
+    .n-l-holder{
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        background:var(--prime);
+        top: 15%;
+        opacity: 0;
+        filter: blur(2px);
+        left: -100%;
+        align-items: flex-end;
+        gap: 13px;
+        padding: 20px 5px;
+        transition: all 0.3s;
+        z-index: 99;
+
+    }
+    .n-act{
+        opacity: 1;
+        filter: blur(0);
+        left: 0;
+        transition: all 0.3s;
+    }
+    .n-main{
+        padding: 10px 5px;
+    }
+    .n-l-holder > a{
+        width: 100%;
+        text-align: end;
+        border-radius: 0;
+        border-bottom: 1px solid wheat;
+    }
+    .n-bar{
+        display: block;
+    }
+    .bar{
+        font-size: 1.5rem;
+        color: white;
+    }
+    .mode1{
+        display: none;
+    }
+    .mode2{
+        display: grid ;
+        place-content: center;
+        transform: translateX(-20px);
+    }
+    .n-logo{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:900px) {
+   .n-l-holder > a{
+    padding: 5px 10px;
+    font-size: 1rem;
+   }
+   .n-logo{
+    width: 50px;
+    height: 50px;
+   }
+}
+@media screen and (min-width:1440px) and (max-width:2560px) {
+    .n-l-holder > a{
+    font-size: 1.8rem;
+   }
+   .n-logo{
+    width: 80px;
+    height: 80px;
+   }
+   .mode{
+    width: 60px;
+    height: 60px;
+   }
+   .light{
+    font-size: 2rem;
+   }
+}

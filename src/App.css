@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+p{
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6,button{
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings:"wdth" 100;
+}
+a{
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-center{
+   flex-direction: column;
+}
+:root{
+    --prime:#003459;
+    --sec:#ffff;
+    --btn:#00171f;
+}
+a{
+    text-decoration: none;
+}
+.head{
+  font-size: 3rem;
+}

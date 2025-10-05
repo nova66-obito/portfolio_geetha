@@ -1,0 +1,32 @@
+.f-main{
+    /* background: var(--sec); */
+    background:var(--prime);
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+.f-logo > img{
+   width: 50px;
+   height: 50px;
+}
+.f-up{
+    width: 70px;
+    height: 70px;
+    background: var(--sec);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transform: translateY(-40px);
+    box-shadow:0 0 10px rgb(0, 0, 0,0.5);
+}
+.f-up > a > .f-up-icon{
+    font-size: 1.5rem;
+    color: black;
+}
+
+@media screen and (max-width:700px) {
+    .f-up{
+    width: 60px;
+    height: 60px;
+      transform: translateY(-30px);
+}
+}

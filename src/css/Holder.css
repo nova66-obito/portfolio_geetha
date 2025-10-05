@@ -1,0 +1,192 @@
+.home{
+    width: 100%;
+    padding: 0px 30px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    background: var(--sec);
+}
+.h-left{
+    width: 50%;
+    gap: 20px;
+}
+.h-text> h1{
+    font-size: 3rem;
+}
+.h-text > h3{
+    font-size: 2rem;
+}
+.Hi{
+    width: 50px;
+    transform: translateY(10px);
+}
+.h-text >p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: rgb(135, 135, 139);
+}
+/* button */
+.cnt{
+    align-self: flex-start;
+    gap: 30px;
+}
+.btn-cover{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background: var(--prime);
+    color: white;
+    border: none;
+    border-radius: 20px 20px 0 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgb(0, 0, 0,0.5);
+    transition: all 0.3s;
+    &::after{
+        position: absolute;
+       width: 100%;
+       content: "";
+       height: 100%;
+       background:white;
+       top: -110px;
+       left: 0px;
+       z-index: -1;
+       transition: all 0.3s;
+    }
+    &:hover::after{
+        top:0;
+    }
+    &:hover{
+        color:black;
+    }
+}
+/* social media */
+.h-social{
+  align-self: flex-start;
+  gap: 20px;
+}
+.h-icon{
+   background-color:var(--prime);
+   width: 40px;
+   height: 40px;
+   border-radius:10px 10px 0px 10px;
+   display: grid;
+   place-content: center;
+   cursor: pointer;
+   transition: all 0.3s;
+   &:hover{
+    box-shadow: 0 0 5px black;
+    background-color: white;
+    animation: up 1s infinite linear;
+   }
+}
+@keyframes up {
+   from{
+     transform: translateY(3px);
+   }    
+   to{
+    transform: translateY(-3px);
+   }
+}
+.h-icon:hover > .icon{
+    color: black;
+}
+.icon{
+    font-size: 1.5rem;
+    color: white;
+}
+/* home right side image  */
+.h-right{
+    width: 50%;
+    height:450px;
+    overflow: hidden;
+}
+.h-right > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+/* about */
+.about
+{
+ padding: 30px;   
+}
+.a-pic{
+    width: 40%;
+    height: 400px;
+    justify-content: flex-start;
+}
+.a-pic > img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+.a-text{
+    width: 60%;
+    position: relative;
+    padding: 70px 0px;
+    padding-bottom: 40px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 20px;
+    box-shadow: 0 0 5px rgba(13, 13, 15, 0.5);
+}
+.a-txt-hold{
+    padding: 0 30px;
+}
+.a-txt-hold > h1{
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+.a-txt-hold > p{
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+     color: rgb(135, 135, 139);
+}
+.a-txt-hold > P > b{
+    color: var(--prime);
+}
+/* top design */
+.a-des{
+    width: 100%;
+    background: var(--prime);
+    position: absolute;
+    top:0px;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+}
+.dot{
+    gap:10px
+}
+.dot > p{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    animation: jump 0.8s infinite linear;
+}
+.dot > P:nth-child(2){
+    background: green;
+    animation-delay: 0.4s;
+}
+.dot > P:nth-child(3){
+    background: yellow;
+    animation-delay: 0.8s;
+}
+@keyframes  jump {
+    from{
+        transform: translateY(5px);
+    } 
+    to{
+        transform: translateY(0px);
+    }
+}
+.a-des > h2{
+    color: var(--sec);
+}
+/* skills */
+
+.skills{
+    padding: 30px 20px;
+}

@@ -1,0 +1,49 @@
+.s-con{
+    gap:30px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+.s-box{
+    width: 200px;
+    height: 200px; 
+    gap:10px;
+    border-radius: 10px;
+    background:var(--sec);
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(10, 9, 9,0.5);
+    transition: all 0.3s;
+    &:hover{
+      background-color:var(--prime);
+    }
+}
+.s-icons{
+    font-size: 120px;
+    color: rgb(121, 118, 118);
+}
+.s-box > h3{
+    font-size: 1.5rem;
+}
+.s-box:hover > .s-icon > .s-icons{
+   color:var(--sec);
+   transition: all 0.3s;
+}
+.s-box:hover > h3{
+    color: var(--sec);
+}
+@media screen and (max-width:700px) and (min-width:300px) {
+    .s-con{
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .s-box{
+        width: 45%;
+        padding: 10px 20px;
+        height:fit-content;
+    }
+    .s-icons{
+        font-size: 80px;
+    }
+    .s-box > h3{
+        font-size: 15px;
+    }
+}
