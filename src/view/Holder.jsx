@@ -12,7 +12,10 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
+import { useTypewriter } from "react-simple-typewriter";
 import Contact from "../components/contect/contect";
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 export default function Holder() {
     let call = [1, 2, 3];
     const conLink = [
@@ -21,16 +24,26 @@ export default function Holder() {
         { name: 'whats', Link: "#", Icon: BsWhatsapp },
         { name: 'mail', Link: "#", Icon: IoMdMail },
     ]
+
+    const [text] = useTypewriter({
+        words: ['web-developer', 'front-end-developer', 'full-stack-java-developer'],
+        loop: true,
+        typeSpeed: 70,
+        deleteSpeed: 50,
+        delaySpeed: 1000,
+    });
     return (
         <>
             <main>
                 <Navbar />
                 <section>
                     <div id="home" className="home center">
-                        <div className="h-left center col-center">
+                        <div
+                           
+                            className="h-left center col-center">
                             <div className="h-text">
                                 <h1>hi all, i'm geetha <img src={Hi} alt="" className="Hi" /></h1>
-                                <h3>web developer</h3>
+                                <h3>{text}|</h3>
                                 <p>A passionate Full Stack web Developer 🚀 having an experience of building Websites with JavaScript / Reactjs / Java and some other cool libraries and frameworks.</p>
                             </div>
                             <div className="h-social center">
@@ -86,15 +99,15 @@ export default function Holder() {
                     </div>
                     {/* skills block */}
                     <div id="skill" className="skills center col-center">
-                        <h1 className="head">skills</h1>
+                        <h1 className="head headline">skills</h1>
                         <Skills />
                     </div>
                     {/* project */}
-                    <Project/>
+                    <Project />
                     {/* contact */}
-                    <Contact/>
+                    <Contact />
                     {/* footer */}
-                    <Footer/>
+                    <Footer />
                 </section>
             </main>
         </>

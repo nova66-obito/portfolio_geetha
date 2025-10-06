@@ -130,7 +130,7 @@ export default function Contact() {
         <>
             <div className="contact center" id="contact">
                 <div className="c-text con-box center col-center">
-                    <h1 className="head">get in touch</h1>
+                    <h1 className="head headline">get in touch</h1>
                     <div className="c-min center col-center">
                         <a href="#" target="__blank"><FaLocationArrow className="c-icons"/> velacheriy,chennai-600042</a>
                         <a href="#" target="__blank"><IoMdMail  className="c-icons"/> sam@gmail.com</a>

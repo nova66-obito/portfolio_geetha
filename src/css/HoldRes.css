@@ -46,13 +46,21 @@
   .h-right{
     display: none;
   }
+  .h-text {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+  }
      .h-text >  p {
     font-size: 1.3rem;
 }
  .h-text > h1{
     font-size: 1.6rem;
     margin-bottom:5px;
- }   
+ }  
+  .h-text > h3{
+    font-size: 1.3rem;
+ } 
  .Hi{
     width: 40px;
  }

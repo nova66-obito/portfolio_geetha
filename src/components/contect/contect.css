@@ -52,6 +52,10 @@
     flex-direction: column;
     position: relative;
 }
+.c-form > h2{
+    font-weight: 400;
+    width:fit-content;
+}
 .f-in{
     align-self: start;
     width: 100%;
@@ -62,7 +66,7 @@
 }
 .f-in > input , .f-in > textarea{
     width: 100%;
-    padding: 10px;
+    padding:10px 0;
     resize: none;
     border: none;
     background: transparent;

@@ -15,7 +15,7 @@ export default function Project() {
     return (
         <>
             <div className="project center col-center" id="project">
-                <h1 className="head">project</h1>
+                <h1 className="head headline headline2">project</h1>
                 <div className="p-hold center">
                     {proDetails.map((item, i) => {
                         return (

@@ -2,25 +2,40 @@
     /* background: var(--sec); */
     background:var(--prime);
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 10px 20px;
+    position: relative;
+}
+.f-logo{
+    width: 60px;
+    height: 60px;
+    background: var(--sec);
+    border-radius: 50%;
 }
 .f-logo > img{
    width: 50px;
    height: 50px;
 }
 .f-up{
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     background: var(--sec);
     border-radius: 50%;
     display: grid;
     place-items: center;
-    transform: translateY(-40px);
     box-shadow:0 0 10px rgb(0, 0, 0,0.5);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Position from top or bottom */
+    top: -25px; /* or bottom: -25px; */
 }
 .f-up > a > .f-up-icon{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: black;
+}
+.f-copy > p{
+    font-style: italic;
+    color: var(--sec);
 }
 
 @media screen and (max-width:700px) {
