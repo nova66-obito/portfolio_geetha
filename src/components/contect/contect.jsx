@@ -8,7 +8,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa6";
-
+import { motion } from "framer-motion";
 export default function Contact() {
     const conLink = [
         { name: "linkedin", Link: "#", Icon: FaLinkedin },
@@ -103,7 +103,7 @@ export default function Contact() {
         try {
             // Simulate API call - replace with your actual backend
             console.log('Form submitted:', userData);
-            
+
             // Reset form after successful submission
             setUserData({
                 name: '',
@@ -115,9 +115,9 @@ export default function Contact() {
                 email: '',
                 message: ''
             });
-            
+
             alert('Message sent successfully!');
-            
+
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('Failed to send message. Please try again.');
@@ -129,12 +129,16 @@ export default function Contact() {
     return (
         <>
             <div className="contact center" id="contact">
-                <div className="c-text con-box center col-center">
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    className="c-text con-box center col-center">
                     <h1 className="head headline">get in touch</h1>
                     <div className="c-min center col-center">
-                        <a href="#" target="__blank"><FaLocationArrow className="c-icons"/> velacheriy,chennai-600042</a>
-                        <a href="#" target="__blank"><IoMdMail  className="c-icons"/> sam@gmail.com</a>
-                        <a href="#" ><IoCall  className="c-icons"/> +919361998327</a>
+                        <a href="#" target="__blank"><FaLocationArrow className="c-icons" /> velacheriy,chennai-600042</a>
+                        <a href="#" target="__blank"><IoMdMail className="c-icons" /> sam@gmail.com</a>
+                        <a href="#" ><IoCall className="c-icons" /> +919361998327</a>
                     </div>
                     <div className="c-m-icon center col-center">
                         <h3>contact me</h3>
@@ -151,16 +155,20 @@ export default function Contact() {
                             })}
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 {/* Message form */}
-                <div className="c-form con-box">
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    className="c-form con-box">
                     <h2>Message Here</h2>
                     <form onSubmit={handleSubmit} className="center col-center c-h-f" noValidate>
                         <div className="f-in center col-center">
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 name="name"
-                                placeholder="your name*" 
+                                placeholder="your name*"
                                 value={userData.name}
                                 onChange={handleChange}
                                 className={error.name ? 'error' : ''}
@@ -168,10 +176,10 @@ export default function Contact() {
                             {error.name && <small className="error-message">{error.name}</small>}
                         </div>
                         <div className="f-in center col-center">
-                            <input 
-                                type="email" 
+                            <input
+                                type="email"
                                 name="email"
-                                placeholder="your email*" 
+                                placeholder="your email*"
                                 value={userData.email}
                                 onChange={handleChange}
                                 className={error.email ? 'error' : ''}
@@ -179,10 +187,10 @@ export default function Contact() {
                             {error.email && <small className="error-message">{error.email}</small>}
                         </div>
                         <div className="f-in center col-center">
-                            <textarea 
-                                name="message" 
-                                id="msg" 
-                                placeholder="message here*" 
+                            <textarea
+                                name="message"
+                                id="msg"
+                                placeholder="message here*"
                                 rows={5}
                                 value={userData.message}
                                 onChange={handleChange}
@@ -196,7 +204,7 @@ export default function Contact() {
                             </button>
                         </div>
                     </form>
-                </div>
+                </motion.div>
             </div>
         </>
     );

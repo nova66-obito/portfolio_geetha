@@ -109,7 +109,8 @@
 /* about */
 .about
 {
- padding: 30px;   
+ padding: 30px;  
+ overflow: hidden; 
 }
 .a-pic{
     width: 40%;

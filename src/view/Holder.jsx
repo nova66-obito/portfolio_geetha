@@ -39,7 +39,7 @@ export default function Holder() {
                 <section>
                     <div id="home" className="home center">
                         <div
-                           
+
                             className="h-left center col-center">
                             <div className="h-text">
                                 <h1>hi all, i'm geetha <img src={Hi} alt="" className="Hi" /></h1>
@@ -68,10 +68,18 @@ export default function Holder() {
                     </div>
                     {/* about page */}
                     <div id="about" className="about center">
-                        <div className="a-pic center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}
+                            viewport={{ once: false, amount: 0.3 }}
+                            className="a-pic center">
                             <img src={Bg2} alt="" />
-                        </div>
-                        <div className="a-text">
+                        </motion.div>
+                        <motion.div 
+                        initial={{opacity:0,x:50}}
+                                 whileInView={{opacity:1,x:0,transition:{duration:0.4}}}
+                                 viewport={{once:false,amount:0.3}}
+                        className="a-text">
                             <div className="a-des center">
                                 <h2>about me</h2>
                                 <div className="dot center">
@@ -95,7 +103,7 @@ export default function Holder() {
                                     Let's connect and discuss how I can add value to your team.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     {/* skills block */}
                     <div id="skill" className="skills center col-center">

@@ -40,8 +40,26 @@
 
 @media screen and (max-width:700px) {
     .f-up{
-    width: 60px;
-    height: 60px;
-      transform: translateY(-30px);
+    width: 40px;
+    height: 40px;
+}
+.f-up > a > .f-up-icon{
+    font-size: 1.5rem;
+    color: black;
+}
+.f-main{
+    padding: 5px 10px;
+}
+.f-logo {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+.f-logo > img{
+    width: 30px;
+    height: 30px;
+}
+.f-copy > p{
+    font-size: 10px;
 }
 }
